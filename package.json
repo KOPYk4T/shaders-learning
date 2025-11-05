@@ -1,4 +1,14 @@
 {
+  "name": "threejs-shaders-projects",
+  "version": "1.0.0",
+  "description": "Repositorio múltiple para proyectos de Three.js y shaders",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:01": "vite projects/01-shader-test",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
   "devDependencies": {
     "three": "^0.181.0",
     "vite": "^7.2.0"

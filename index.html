@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Three.js Shaders Projects</title>
+  </head>
+  <body>
+    <h1>Three.js Shaders Projects</h1>
+
+    <ul id="projects-list">
+      <li>Cargando proyectos...</li>
+    </ul>
+
+    <script type="module">
+      const projects = [{ id: "01-shader-test", name: "01-shader-test" }];
+
+      const list = document.getElementById("projects-list");
+      list.innerHTML = projects
+        .map(
+          (project) =>
+            `<li><a href="/projects/${project.id}/">${project.name}</a></li>`
+        )
+        .join("");
+    </script>
+  </body>
+</html>
