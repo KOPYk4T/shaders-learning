@@ -1,11 +1,12 @@
 {
   "name": "threejs-shaders-projects",
   "version": "1.0.0",
-  "description": "Repositorio múltiple para proyectos de Three.js y shaders",
+  "description": "Multiple Three.js Shaders Projects for learning purposes",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "dev:01": "vite projects/01-shader-test",
+    "dev:02": "vite projects/02-day-night-william-turner",
     "build": "vite build",
     "preview": "vite preview"
   },

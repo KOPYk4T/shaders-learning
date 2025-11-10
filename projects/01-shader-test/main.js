@@ -1,21 +1,17 @@
 import * as THREE from "three";
 
-// Fragment shader executes for each pixel and defines the color of each one.
-
 const fragmentShader = `
-  uniform float u_time;  // Tiempo en segundos (se actualiza cada frame)
+  uniform float u_time;  // Time in seconds (updated every frame)
 
   void main() {
-    // Colores que oscilan con seno y coseno
-    float r = sin(u_time) * 0.5 + 0.5;        // Rojo: 0 → 1 → 0
-    float g = cos(u_time) * 0.5 + 0.5;        // Verde: desfasado
-    float b = sin(u_time * 0.5) * 0.5 + 0.5;  // Azul: más lento
+    // Colors that oscillate with sine and cosine
+    float r = sin(u_time) * 0.5 + 0.5;        // Red: 0 → 1 → 0
+    float g = cos(u_time) * 0.5 + 0.5;        // Green: desynchronized
+    float b = sin(u_time * 0.5) * 0.5 + 0.5;  // Blue: slower
     
-    gl_FragColor = vec4(r, g, b, 1.0);  // Color final del píxel (RGBA)
+    gl_FragColor = vec4(r, g, b, 1.0);  // Final pixel color (RGBA)
   }
 `;
-
-// Three.js boilerplate
 
 const vertexShader = `void main() { gl_Position = vec4(position, 1.0); }`;
 
@@ -50,7 +46,6 @@ function init() {
     powerPreference: "high-performance",
   });
 
-  // Set the pixel ratio to the minimum of the device pixel ratio and 1.5 to avoid blurriness
   const pixelRatio = Math.min(window.devicePixelRatio, 1.5);
   renderer.setPixelRatio(pixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
@@ -68,9 +63,7 @@ function init() {
 
 function animate() {
   requestAnimationFrame(animate);
-  // Only render if the document is not hidden
   if (!document.hidden) {
-    // Update the time uniform to animate the shader
     uniforms.u_time.value = clock.getElapsedTime();
     renderer.render(scene, camera);
   }

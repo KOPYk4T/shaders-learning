@@ -1,69 +1,70 @@
 # Three.js Shaders Projects
 
-Repositorio múltiple para proyectos de Three.js y shaders basados en [The Book of Shaders](https://thebookofshaders.com/).
+Multi-project repository for Three.js shader experiments inspired by [The Book of Shaders](https://thebookofshaders.com/).
 
-## Estructura
+## Structure
 
 ```
-├── index.html              # Página índice que lista todos los proyectos
+├── index.html              # Landing page that lists every project
 ├── projects/
-│   ├── 01-shader-test/     # Primer proyecto de prueba de shaders
-│   │   └── README.md       # Documentación específica del proyecto
-│   ├── 02-[nombre]/        # Siguiente proyecto...
+│   ├── 01-shader-test/     # First shader experiment
+│   │   └── README.md       # Project-specific docs
+│   ├── 02-[name]/          # Next project...
 │   └── ...
-├── node_modules/           # Dependencias compartidas
+├── node_modules/           # Shared dependencies
 ├── package.json
 ├── vite.config.js
-└── README.md               # Este archivo
+└── README.md               # This file
 ```
 
-Cada proyecto tiene su propia carpeta dentro de `projects/` con:
+Each project lives in its own folder under `projects/` with:
 
-- `index.html` - HTML del proyecto
-- `main.js` - Código JavaScript principal
-- `README.md` - Documentación específica del proyecto
-- Otros assets según necesite cada proyecto
+- `index.html` - Project HTML
+- `main.js` - Main JavaScript entry point
+- `README.md` - Project documentation
+- Any additional assets needed by the project
 
-## Uso
+## Usage
 
-### Instalar dependencias
+### Install dependencies
 
 ```bash
 npm install
 ```
 
-### Ejecutar un proyecto específico
+### Run a specific project
 
 ```bash
-npm run dev:01    # Para el proyecto 01
-npm run dev:02    # Para el proyecto 02
+npm run dev:01    # Project 01
+npm run dev:02    # Project 02
 ...
 ```
 
-### Ejecutar servidor de desarrollo (página índice)
+### Run the index development server
 
 ```bash
 npm run dev
 ```
 
-Esto abrirá la página índice en la raíz que muestra todos los proyectos disponibles. Desde ahí puedes navegar a cualquier proyecto haciendo clic en su enlace.
+This opens the root landing page listing every project. Click any link to navigate to its shader.
 
-## Proyectos
+## Projects
 
-- **[01-shader-test](./projects/01-shader-test/README.md)** - Proyecto inicial con animación de colores usando funciones trigonométricas
+- **[01-shader-test](./projects/01-shader-test/README.md)** - Intro project with color animation driven by trigonometric functions
+- **[02-day-night-william-turner](./projects/02-day-night-william-turner/README.md)** - Gradient inspired by J. M. W. Turner’s _The Fighting Temeraire_
 
-Cada proyecto tiene su propio README con detalles específicos.
+Each project ships with its own README for deeper details.
 
-## Crear un nuevo proyecto
+## Create a new project
 
-1. Crear una nueva carpeta en `projects/` con un nombre descriptivo (ej: `02-mi-shader`)
-2. Copiar la estructura básica de `01-shader-test` como plantilla
-3. Crear un `README.md` en la carpeta del proyecto con su documentación
-4. Modificar según tus necesidades
-5. **Agregar el proyecto a la lista en `index.html`** (en el array `projects` del script)
-6. Opcional: Agregar un script en `package.json` para acceso directo (ej: `dev:02`)
+1. Create a new folder inside `projects/` with a descriptive name (e.g. `03-my-shader`)
+2. Copy the base structure from `01-shader-test` as a starting point
+3. Add a `README.md` inside the project folder with its documentation
+4. Adapt the shader to your needs
+5. **Add the project to the list in `index.html`** (within the `projects` array)
+6. Optional: Add a script in `package.json` for quicker access (e.g. `dev:03`)
 
-## Referencias
+## References
 
 - [The Book of Shaders](https://thebookofshaders.com/)
 - [Three.js Documentation](https://threejs.org/docs/)
