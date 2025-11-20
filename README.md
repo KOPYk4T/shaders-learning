@@ -21,8 +21,11 @@ Each project lives in its own folder under `projects/` with:
 
 - `index.html` - Project HTML
 - `main.js` - Main JavaScript entry point
+- `shaders/` - GLSL shader files (fragment.glsl, vertex.glsl)
 - `README.md` - Project documentation
 - Any additional assets needed by the project
+
+Shaders are kept in separate `.glsl` files for better syntax highlighting and organization. Vite is configured to import them with `?raw` suffix.
 
 ## Usage
 
@@ -51,18 +54,20 @@ This opens the root landing page listing every project. Click any link to naviga
 ## Projects
 
 - **[01-shader-test](./projects/01-shader-test/README.md)** - Intro project with color animation driven by trigonometric functions
-- **[02-day-night-william-turner](./projects/02-day-night-william-turner/README.md)** - Gradient inspired by J. M. W. Turner’s _The Fighting Temeraire_
+- **[02-day-night-william-turner](./projects/02-day-night-william-turner/README.md)** - Gradient inspired by J. M. W. Turner's _The Fighting Temeraire_
+- **[03-rgb-hsb](./projects/03-rgb-hsb/README.md)** - Interactive HSB color space demonstration with RGB conversion functions
 
 Each project ships with its own README for deeper details.
 
 ## Create a new project
 
-1. Create a new folder inside `projects/` with a descriptive name (e.g. `03-my-shader`)
-2. Copy the base structure from `01-shader-test` as a starting point
-3. Add a `README.md` inside the project folder with its documentation
-4. Adapt the shader to your needs
-5. **Add the project to the list in `index.html`** (within the `projects` array)
-6. Optional: Add a script in `package.json` for quicker access (e.g. `dev:03`)
+1. Create a new folder inside `projects/` with a descriptive name (e.g. `04-my-shader`)
+2. Copy the base structure from any existing project as a starting point
+3. Create a `shaders/` folder with `fragment.glsl` and `vertex.glsl`
+4. Import shaders in `main.js` with `import fragmentShader from "./shaders/fragment.glsl?raw"`
+5. Add a `README.md` inside the project folder with its documentation
+6. **Add the project to the list in `index.html`** (within the `projects` array)
+7. Add a script in `package.json` for quicker access (e.g. `"dev:04": "vite projects/04-my-shader"`)
 
 ## References
 

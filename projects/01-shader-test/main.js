@@ -1,19 +1,6 @@
 import * as THREE from "three";
-
-const fragmentShader = `
-  uniform float u_time;  // Time in seconds (updated every frame)
-
-  void main() {
-    // Colors that oscillate with sine and cosine
-    float r = sin(u_time) * 0.5 + 0.5;        // Red: 0 → 1 → 0
-    float g = cos(u_time) * 0.5 + 0.5;        // Green: desynchronized
-    float b = sin(u_time * 0.5) * 0.5 + 0.5;  // Blue: slower
-    
-    gl_FragColor = vec4(r, g, b, 1.0);  // Final pixel color (RGBA)
-  }
-`;
-
-const vertexShader = `void main() { gl_Position = vec4(position, 1.0); }`;
+import fragmentShader from "./shaders/fragment.glsl?raw";
+import vertexShader from "./shaders/vertex.glsl?raw";
 
 let camera, scene, renderer, clock, uniforms;
 let resizeTimeout;
