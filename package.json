@@ -7,6 +7,7 @@
     "dev": "vite",
     "dev:01": "vite projects/01-shader-test",
     "dev:02": "vite projects/02-day-night-william-turner",
+    "dev:03": "vite projects/03-rgb-hsb",
     "build": "vite build",
     "preview": "vite preview"
   },
